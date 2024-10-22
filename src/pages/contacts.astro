@@ -1,0 +1,73 @@
+---
+import App from "../App.astro";
+---
+
+<App>
+  <main class="max-w-full overflow-hidden">
+    <!-- Контакты -->
+    <section class="max-w-[1160px] mx-auto px-5 xl:px-0">
+      <h2 class="text-2xl lg:text-[32px] font-semibold mt-[60px]">Контакты</h2>
+
+      <iframe
+        src="https://yandex.uz/map-widget/v1/?ll=39.959647%2C43.407094&mode=poi&poi%5Bpoint%5D=39.958318%2C43.407416&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D37066860467&z=16"
+        width="100%"
+        allowfullscreen="true"
+        style="position: relative"
+        class="rounded-[20px] mt-[40px] h-[180px] md:h-[207px] lg:h-[421px] xl:h-[520px]"
+      ></iframe>
+
+      <div
+        class="flex items-start lg:items-center justify-start lg:justify-between flex-col lg:flex-row w-full"
+      >
+        <div class="flex flex-col md:flex-row gap-[30px] lg:gap-[130px] w-full">
+          <div class="w-full">
+            <h3 class="text-[20px] font-bold mt-[60px]">Для посетителей</h3>
+            <button
+              class="mt-[20px] flex items-center gap-2 w-full lg:w-[300px] h-[45px] rounded-[40px] border border-[#F71313] text-[#F71313] justify-center"
+            >
+              <img
+                src="./assets/images/Message.png"
+                alt="message"
+              />info@intickets.ru
+            </button>
+            <button
+              class="mt-[20px] flex items-center gap-2 w-full lg:w-[300px] h-[45px] rounded-[40px] border border-[#F71313] text-[#F71313] justify-center"
+            >
+              <img src="./assets/images/Calling.png" alt="message" />+7 (499)
+              322-31-06
+            </button>
+          </div>
+          <div class="w-full">
+            <h3 class="text-[20px] font-bold md:mt-[60px]">
+              Для организаторов
+            </h3>
+            <button
+              class="mt-[20px] flex items-center gap-2 w-full lg:w-[300px] h-[45px] rounded-[40px] border border-[#F71313] text-[#F71313] justify-center"
+            >
+              <img
+                src="./assets/images/Message.png"
+                alt="message"
+              />info@intickets.ru
+            </button>
+            <button
+              class="mt-[20px] flex items-center gap-2 w-full lg:w-[300px] h-[45px] rounded-[40px] border border-[#F71313] text-[#F71313] justify-center"
+            >
+              <img src="./assets/images/Calling.png" alt="message" />+7 (499)
+              322-31-06
+            </button>
+          </div>
+        </div>
+
+        <div class="w-full lg:ml-[130px]">
+          <h3 class="text-[20px] font-bold mt-[30px] lg:mt-[-10px]">
+            Мессенджеры для связи
+          </h3>
+          <div class="flex items-center justify-start gap-[10px] mt-[20px]">
+            <img src="./assets/images/tg.png" alt="tg" />
+            <img src="./assets/images/whatsapp.png" alt="whatsapp" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</App>

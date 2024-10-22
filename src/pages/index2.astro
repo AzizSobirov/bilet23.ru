@@ -1,0 +1,546 @@
+---
+import App from "../App.astro";
+---
+
+<App>
+  <main class="max-w-full overflow-hidden">
+    <!-- Интро -->
+    <section
+      class="relative mx-auto mt-[30px] xs:mt-[40px] md:mt-[50px] xl:mt-[60px] px-5 xl:px-0 max-w-[1160px] !min-h-[344px] h-[344px] !xs:min-h-[246px] xs:h-[246px] !lg:min-h-[350px] lg:h-[350px]"
+      id="intro-swiper"
+    >
+      <div class="swiper h-full">
+        <div class="swiper-wrapper">
+          <div
+            class="relative swiper-slide w-full md:w-[460px] lg:w-[700px] xl:w-[865px]"
+          >
+            <img
+              src="./assets/images/slider1.png"
+              alt="image"
+              class="rounded-[10px] md:rounded-[30px] w-[865px] object-cover h-full"
+            />
+            <p
+              class="absolute text-[14px] text-[#808080] top-[20px] md:top-[30px] left-[20px] md:left-[60px]"
+            >
+              Спектакль · 12+
+            </p>
+            <div
+              class="absolute bottom-[55px] md:bottom-[20px] left-[20px] md:left-[60px]"
+            >
+              <div>
+                <p class="text-white text-[16px] md:text-[24px] font-semibold">
+                  У каждого свои недостатки
+                </p>
+                <div class="flex items-center justify-start gap-[10px]">
+                  <img src="./assets/images/location.svg" alt="location" />
+                  <p class="text-white text-[14px]">
+                    Театр оперетты · 16 марта
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p
+              class="absolute left-[20px] md:left-[76%] md:bottom-[20px] lg:left-[83%] lg:right-[30px] bottom-[15px] lg:bottom-[30px] bg-[#F71313] rounded-[40px] py-[4px] lg:py-[9px] px-[13px] text-[14px] text-white w-[100px]"
+            >
+              от 12 500 ₽
+            </p>
+          </div>
+          <div
+            class="relative swiper-slide w-full md:w-[460px] lg:w-[700px] xl:w-[865px]"
+          >
+            <img
+              src="./assets/images/slider2.png"
+              alt="image"
+              class="rounded-[10px] md:rounded-[30px] w-[865px] object-cover h-full"
+            />
+            <p
+              class="absolute text-[14px] text-[#808080] top-[20px] md:top-[30px] left-[20px] md:left-[60px]"
+            >
+              Спектакль · 12+
+            </p>
+            <div
+              class="absolute bottom-[55px] md:bottom-[20px] left-[20px] md:left-[60px]"
+            >
+              <div>
+                <p class="text-white text-[16px] md:text-[24px] font-semibold">
+                  У каждого свои недостатки
+                </p>
+                <div class="flex items-center justify-start gap-[10px]">
+                  <img src="./assets/images/location.svg" alt="location" />
+                  <p class="text-white text-[14px]">
+                    Театр оперетты · 16 марта
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p
+              class="absolute left-[20px] md:left-[76%] md:bottom-[20px] lg:left-[83%] lg:right-[30px] bottom-[15px] lg:bottom-[30px] bg-[#F71313] rounded-[40px] py-[4px] lg:py-[9px] px-[13px] text-[14px] text-white w-[100px]"
+            >
+              от 12 500 ₽
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev xl:!left-0 xl:-translate-x-1/2"></div>
+      <div class="swiper-button-next xl:!right-0 xl:translate-x-1/2"></div>
+    </section>
+
+    <!-- Билеты -->
+    <section class="mx-auto mt-[30px] xl:mt-[40px] px-5 xl:px-0 max-w-[1160px]">
+      <!-- преимущества -->
+      <div class="w-full">
+        <div
+          class="w-full relative flex justify-center flex-col md:flex-row items-center gap-[15px] sm:gap-5"
+        >
+          <div
+            class="w-full flex items-center gap-[20px] flex-col lg:flex-col xl:flex-row"
+          >
+            <div
+              class="relative w-full lg:w-full lg:h-[154px] h-[122px] rounded-[10px] max-w-full lg:max-w-none"
+            >
+              <img
+                src="./assets/images/info1.png"
+                alt="info"
+                class="w-full object-cover h-full rounded-[10px]"
+              />
+              <p
+                class="absolute top-[20px] left-[20px] text-[16px] sm:text-[18px] font-bold text-white uppercase md:max-w-[185px] w-[110px]"
+              >
+                КАТКИ В ГОРОДЕ
+              </p>
+              <p
+                class="absolute text-[14px] bottom-[15px] lg:bottom-[20px] text-white left-[20px]"
+              >
+                Подборка
+              </p>
+            </div>
+
+            <div
+              class="relative w-full lg:w-full lg:h-[154px] h-[122px] rounded-[10px] max-w-full lg:max-w-none"
+            >
+              <img
+                src="./assets/images/info2.png"
+                alt="info"
+                class="w-full object-cover h-full rounded-[10px]"
+              />
+              <p
+                class="absolute top-[67px] lg:top-[90px] left-[20px] text-[16px] sm:text-[18px] font-bold text-white uppercase max-w-[185px]"
+              >
+                Ничего не бойся, я с тобой
+              </p>
+              <p
+                class="absolute text-[14px] bottom-[60px] lg:bottom-[70px] text-white left-[20px]"
+              >
+                Мюзикл
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-full flex items-center gap-[20px] flex-col lg:flex-col xl:flex-row"
+          >
+            <div
+              class="relative w-full lg:w-full lg:h-[154px] h-[122px] rounded-[10px] max-w-full lg:max-w-none"
+            >
+              <img
+                src="./assets/images/info3.png"
+                alt="info"
+                class="w-full object-cover h-full rounded-[10px]"
+              />
+              <p
+                class="absolute top-[20px] left-[20px] text-[16px] sm:text-[18px] font-bold text-white uppercase w-[173px] md:max-w-[185px]"
+              >
+                БИЛЕТ МОЖНО ОПЛАТИТЬ ЧАСТЯМИ
+              </p>
+            </div>
+
+            <div
+              class="relative w-full lg:w-full lg:h-[154px] h-[122px] rounded-[10px] max-w-full lg:max-w-none"
+            >
+              <img
+                src="./assets/images/info4.png"
+                alt="info"
+                class="w-full object-cover h-full rounded-[10px]"
+              />
+              <p
+                class="absolute top-[20px] left-[20px] text-[16px] sm:text-[18px] font-bold text-white uppercase max-w-[185px]"
+              >
+                <span class="font-medium block">Билеты</span> в Третьяковскую галерею
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Мероприятия -->
+      <div class="relative mt-[50px] lg:mt-[60px] xl:mt-[80px]">
+        <div class="max-w-[1160px] mx-auto">
+          <h1 class="text-2xl lg:text-[32px] font-semibold">Мероприятия</h1>
+
+          <!-- Search -->
+          <div class="flex flex-col gap-[10px]">
+            <div
+              class="rounded-[19px] py-[10px] flex items-center justify-between bg-[#EBEBEB] px-[20px] xl:hidden mt-[20px]"
+            >
+              <input
+                type="text"
+                class="outline-0 bg-transparent border-0 text-[16px] truncate"
+                placeholder="Поиск по названию"
+              />
+              <img src="./assets/images/search.svg" alt="search" />
+            </div>
+          </div>
+
+          <div
+            class="relative mt-3 md:mt-10 flex flex-col-reverse sm:flex-col md:flex-row items-center md:items-start gap-5 sm:gap-0 justify-between"
+          >
+            <div
+              class="flex flex-col items-center lg:flex-row justify-center md:justify-between gap-2.5 w-full"
+            >
+              <div class="w-full md:w-fit flex gap-2.5 flex-col md:flex-row">
+                <div class="flex gap-[10px]">
+                  <p
+                    id="datePickerToggle"
+                    class="button py-2.5 text-[16px] w-36 sm:w-[50%] px-2 sm:px-6 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
+                  >
+                    Дата
+                    <img src="./assets/images/date.svg" alt="date" />
+                  </p>
+                  <p
+                    id="priceButton"
+                    class="button py-2.5 text-[16px] w-36 px-3 sm:px-6 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400 grow md:grow-0"
+                  >
+                    Цена
+                    <img src="./assets/images/price.svg" alt="price" />
+                  </p>
+                </div>
+
+                <div class="checkbox-container md:w-50 sm:mt-0">
+                  <label
+                    class="checkbox-label w-full"
+                    for="promo-checkbox"
+                    id="checkbox_text"
+                  >
+                    <p id="text_aksii">Акции / скидки</p>
+                    <input
+                      type="checkbox"
+                      id="promo-checkbox"
+                      class="hidden-checkbox"
+                    />
+                    <span class="custom-checkbox"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="w-full md:w-fit flex items-center gap-2.5">
+                <p
+                  id="sortByDate"
+                  class="arrow grow md:grow-0 py-2.5 text-[16px] w-36 px-6 flex items-center justify-center gap-3 rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
+                >
+                  По дате
+                  <img
+                    src="./assets/images/arrow.svg"
+                    alt="date"
+                    class="arrow_img"
+                  />
+                </p>
+                <p
+                  id="sortByPrice"
+                  class="arrow grow md:grow-0 py-2.5 text-[16px] w-36 px-6 flex items-center justify-center gap-3 rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
+                >
+                  По цене
+                  <img
+                    src="./assets/images/arrow.svg"
+                    alt="date"
+                    class="arrow_img"
+                  />
+                </p>
+                <div
+                  class="rounded-full py-2.5 ml-2.5 xl:flex items-center justify-between bg-gray-200 px-[30px] hidden"
+                >
+                  <input
+                    type="text"
+                    id="searchInput"
+                    class="w-30 md:w-45 outline-0 bg-transparent border-0 text-[16px] truncate"
+                    placeholder="Поиск по названию"
+                  />
+                  <img src="./assets/images/search.svg" alt="search" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendar -->
+          <div id="calendar" class="hidden">
+            <div id="datePicker">
+              <div class="modal-content1">
+                <div class="calendar-container">
+                  <img
+                    src="./assets/images/close_modal.png"
+                    alt="close"
+                    class="close-icon"
+                    id="closeCalendarModal"
+                  />
+                  <div class="calendar-controls pt-[30px]">
+                    <img
+                      src="./assets/images/double-left-chevron-svgrepo-com.svg"
+                      alt="arrow"
+                      id="prevYear"
+                      class="arrow-icon"
+                    />
+                    <img
+                      src="./assets/images/arrow-left-5-svgrepo-com.svg"
+                      alt="arrow"
+                      id="prevMonth"
+                      class="arrow-icon"
+                    />
+
+                    <p id="monthYear" class="month-year">Март 2023</p>
+                    <img
+                      src="./assets/images/right-arrow-svgrepo-com.svg"
+                      alt="arrow"
+                      id="nextMonth"
+                      class="arrow-icon"
+                    />
+                    <img
+                      src="./assets/images/double-right-chevron-svgrepo-com.svg"
+                      alt="arrow"
+                      id="nextYear"
+                      class="arrow-icon"
+                    />
+                  </div>
+                  <div class="days-of-week">
+                    <ul class="days-list">
+                      <li>Пн</li>
+                      <li>Вт</li>
+                      <li>Ср</li>
+                      <li>Чт</li>
+                      <li>Пт</li>
+                      <li class="weekend">Сб</li>
+                      <li class="weekend">Вс</li>
+                    </ul>
+                  </div>
+                  <div id="calendarDays" class="calendar-days"></div>
+                  <div class="weekend-info">
+                    <p>эти выходные · следующие</p>
+                    <p>эта неделя · следующая</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Price range -->
+          <div id="price" class="hidden">
+            <div id="priceRangeModal">
+              <div class="modal-content relative">
+                <img
+                  src="./assets/images/close_modal.png"
+                  alt="close"
+                  class="cursor-pointer absolute right-3 top-3 close"
+                  id="closePriceRangeModal"
+                />
+                <div class="range_container">
+                  <h2 class="text-center font-semibold my-3">Цена</h2>
+                  <div class="form_control mb-[30px] flex gap-3 md:gap-5">
+                    <div
+                      class="form_control_container flex items-center w-full sm:w-[150px] h-[40px] rounded-full bg-[#EBEBEB] text-[#635a5a] px-[20px] md:px-[30px] gap-2"
+                    >
+                      <h3 class="form_control_container__time text-[17px]">
+                        От
+                      </h3>
+                      <input
+                        class="form_control_container__time__input !text-[18px] outline-none text-[#635a5a] bg-transparent"
+                        type="number"
+                        id="fromInput"
+                        value="180"
+                        min="0"
+                        max="1500"
+                      />
+                    </div>
+                    <div
+                      class="form_control_container flex items-center w-full sm:w-[150px] h-[40px] rounded-full bg-[#EBEBEB] text-[#635a5a] px-[20px] md:px-[30px] gap-2"
+                    >
+                      <h3 class="form_control_container__time text-[17px]">
+                        До
+                      </h3>
+                      <input
+                        class="form_control_container__time__input !text-[18px] outline-none text-[#635a5a] bg-transparent"
+                        type="number"
+                        id="toInput"
+                        value="1500"
+                        min="0"
+                        max="1500"
+                      />
+                    </div>
+                  </div>
+                  <div class="sliders_control">
+                    <input
+                      id="fromSlider"
+                      type="range"
+                      value="10"
+                      min="0"
+                      max="1500"
+                      class="text-[16px]"
+                    />
+                    <input
+                      id="toSlider"
+                      type="range"
+                      value="400"
+                      min="0"
+                      max="1500"
+                      class="text-[16px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="itemsContainer" class="mt-5"></div>
+
+          <!-- cards -->
+          <div
+            class="mt-8 md:mt-10 w-full flex flex-wrap gap-x-5 md:gap-x-6 lg:gap-x-5 gap-y-10"
+          >
+            {
+              Array.from({ length: 12 }).map((item, idx) => (
+                <div class="card grow sm:basis-[220px]">
+                  <div class="relative h-[154px] sm:h-[120px] xl:h-[154px] rounded-xl overflow-hidden">
+                    {idx == 0 && (
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/images/card.png"
+                        alt="card"
+                      />
+                    )}
+
+                    {idx == 1 && (
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/images/card2.png"
+                        alt="card"
+                      />
+                    )}
+
+                    {idx == 2 ? (
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/images/card3.png"
+                        alt="card"
+                      />
+                    ) : (
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/images/card4.png"
+                        alt="card"
+                      />
+                    )}
+
+                    <span class="absolute left-[10px] md:left-[20px] top-[10px] md:top-[20px] text-[12px] text-white py-[5px] px-[14px] bg-[#242424] rounded-[40px]">
+                      Театр · 6+
+                    </span>
+
+                    <span class="absolute right-[10px] md:right-[20px] bottom-[10px] md:bottom-5 text-[12px] text-white py-[5px] px-[14px] bg-[#F71313] rounded-[40px]">
+                      от 12 500 ₽
+                    </span>
+                  </div>
+
+                  <div class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]">
+                    На солнце, вдоль рядов кукурузы
+                  </div>
+
+                  <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                    18 марта · СБ · 12:00
+                  </p>
+                  <a
+                    href="./ploshadka.html"
+                    target="_blank"
+                    class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                  >
+                    ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
+                  </a>
+
+                  <div class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white ">
+                    <a
+                      href="#"
+                      class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center "
+                    >
+                      Купить билеты
+                    </a>
+                    {idx % 2 == 0 && (
+                      <a
+                        href="#"
+                        class="h-8 grow basis-28 rounded-[50px] bg-[#1206F9] flex items-center justify-center "
+                      >
+                        Пушкинская карта
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+          <!-- show more button -->
+          <div class="flex justify-center items-center mx-auto">
+            <p
+              class="text-[#F71313] sm:w-full rounded-[40px] border border-[#F71313] py-[12.5px] text-center hover:bg-[#F71313] hover:text-white transition-all mt-[40px] cursor-pointer w-[300px] mx-auto"
+            >
+              Смотреть больше мероприятий
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Мероприятие -->
+    <section class="mt-5 max-w-[1160px] mx-auto px-5 xl:px-0">
+      <!-- Img -->
+      <img
+        src="./assets/images/Mask group.png"
+        alt="404"
+        class="mt-10 lg:mt-12 xl:mt-[60px] w-full h-[345px] sm:h-[180px] md:h-[245px] lg:h-[370px] object-cover rounded-[10px] sm:rounded-[15px] md:rounded-[30px]"
+      />
+
+      <!-- Концерт  -->
+      <div
+        class="mt-5 w-full flex flex-col items-start gap-5 sm:mt-[30px] xl:mt-[50px]"
+      >
+        <div class="w-full flex flex-col gap-[10px]">
+          <a
+            href="./ploshadka.html"
+            target="_blank"
+            class="text-2xl md:text-[32px] font-semibold"
+          >
+            Концерт «Органный фестиваль. Даниэль Сальвадор»
+          </a>
+          <p class="text-base md:text-lg font-medium">
+            18 марта · СБ · 12:00 · 2023 · Театр · Детям
+          </p>
+        </div>
+
+        <div class="w-full flex flex-wrap justify-center gap-x-5 gap-y-2">
+          <button
+            class="h-[45px] grow basis-52 rounded-[50px] bg-[#F71313] text-white font-medium"
+          >
+            Билеты от 350 ₽
+          </button>
+          <button
+            class="h-[45px] grow basis-52 rounded-[50px] bg-[#1206F9] text-white font-medium"
+          >
+            Пушкинская карта
+          </button>
+        </div>
+
+        <a
+          href="./ploshadka.html"
+          target="_blank"
+          class="mt-5 text-base sm:text-lg md:text-lg border-b font-medium border-[#F71313]"
+        >
+          ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
+        </a>
+      </div>
+    </section>
+  </main>
+</App>
