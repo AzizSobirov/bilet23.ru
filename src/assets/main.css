@@ -196,34 +196,67 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-#priceRangeModal {
-  position: absolute;
-  top: 150px;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-}
-
 #calendar {
+  position: absolute;
+  transform: translateY(20px);
   justify-content: center;
   align-items: center;
+  width: 460px;
+  max-width: calc(100vw - 40px);
+  height: fit-content;
+  z-index: 999;
+}
+
+#price {
   position: absolute;
-  top: 100px;
-  width: 100%;
-  height: 100%;
+  transform: translateY(20px);
+  justify-content: center;
+  align-items: center;
+  width: 460px;
+  max-width: calc(100vw - 40px);
+  height: fit-content;
   z-index: 999;
 }
 
 #datePicker {
   position: absolute;
-  top: 50px;
+  top: 0;
   left: 0;
-  width: 80%;
-  max-width: 440px;
+  width: 100%;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.05);
+}
+
+#priceRangeModal {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  #price {
+    transform: translateY(10px);
+    left: 50%;
+  }
+
+  #priceRangeModal {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #price {
+    left: auto;
+    right: 0;
+  }
+
+  #priceRangeModal {
+    transform: translateX(0);
+  }
 }
 
 .modal-content1 {
@@ -235,6 +268,13 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: center;
   width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+  .calendar-container {
+    padding: 0 10px;
+    width: 100%;
+  }
 }
 
 .close-icon {
@@ -264,7 +304,8 @@ input::-webkit-inner-spin-button {
 
 .days-of-week {
   background-color: #ebebeb;
-  width: 90%;
+  padding: 0 10px;
+  width: 100%;
   height: 40px;
   border-radius: 20px;
   margin-top: 15px;
@@ -286,6 +327,7 @@ input::-webkit-inner-spin-button {
 }
 
 .calendar-days {
+  padding: 0 10px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 2px;
@@ -302,11 +344,8 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 768px) {
-  #datePicker {
-    width: 100%;
-    top: 400px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  #calendar {
+    transform: translateY(10px);
   }
 
   .arrow-icon {
@@ -318,18 +357,10 @@ input::-webkit-inner-spin-button {
   }
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   #priceRangeModal {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 7.8%;
-    width: 100%;
   }
-}
+} */
 
 .modal-content {
   background-color: #fff;

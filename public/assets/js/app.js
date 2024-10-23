@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closePriceRangeModal = document.getElementById("closePriceRangeModal");
   const calendar = document.getElementById("calendar");
   const price = document.getElementById("price");
-  const priceImg = document.querySelector("#priceButtonimg");
+  const priceImg = document.querySelector("#priceButton img");
   const dataImg = document.querySelector("#datePickerToggle img");
   const nextMonth = document.getElementById("nextMonth");
   const prevMonth = document.getElementById("prevMonth");
@@ -20,53 +20,69 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchMenu = document.getElementById("searchMenu");
   const closeSearch = document.getElementById("closeSearch");
 
+  const debouncedFilterItems = debounce(filterItems, 100); // 300ms delay
+
   let currentDate = new Date();
   let today = new Date();
   let selectedDay = null;
   let selectedMonth = null;
   let selectedYear = null;
 
-  datePickerToggle &&
+  if (datePickerToggle) {
     datePickerToggle.addEventListener("click", function () {
       calendar.classList.toggle("hidden");
+      calendar.classList.add("is-open");
       const isDataActive = datePickerToggle.classList.toggle("active");
       const dataSrc = isDataActive
         ? "./assets/images/active-data.png"
         : "./assets/images/date.svg";
       dataImg.src = dataSrc;
+
+      if (price.classList.contains("is-open")) {
+        price.classList.add("hidden");
+        price.classList.remove("is-open");
+        priceButton.classList.remove("active");
+        priceImg.classList.remove("active");
+        priceImg.src = "./assets/images/price.svg";
+      }
     });
+  }
 
   closeCalendarModal &&
     closeCalendarModal.addEventListener("click", function () {
       calendar.classList.add("hidden");
+      calendar.classList.remove("is-open");
       datePickerToggle.classList.remove("active");
       dataImg.src = "./assets/images/date.svg";
     });
 
-  priceButton &&
+  if (priceButton) {
     priceButton.addEventListener("click", function () {
       price.classList.toggle("hidden");
+      price.classList.add("is-open");
       const isActive = priceButton.classList.toggle("active");
       const imgSrc = isActive
         ? "./assets/images/active-price.png"
         : "./assets/images/price.svg";
       priceImg.src = imgSrc;
+
+      if (calendar.classList.contains("is-open")) {
+        calendar.classList.add("hidden");
+        calendar.classList.remove("is-open");
+        datePickerToggle.classList.remove("active");
+        dataImg.src = "./assets/images/date.svg";
+      }
     });
 
-  closePriceRangeModal &&
-    closePriceRangeModal.addEventListener("click", function () {
-      price.classList.add("hidden");
-      priceButton.classList.remove("active");
-      priceImg.classList.remove("active");
-      priceImg.src = "./assets/images/price.svg";
-    });
-
-  window.onclick = function (event) {
-    if (event.target === price) {
-      price.classList.add("hidden");
-      priceButton.classList.remove("active");
-    }
-  };
+    closePriceRangeModal &&
+      closePriceRangeModal.addEventListener("click", function () {
+        price.classList.add("hidden");
+        price.classList.remove("is-open");
+        priceButton.classList.remove("active");
+        priceImg.classList.remove("active");
+        priceImg.src = "./assets/images/price.svg";
+      });
+  }
 
   searchToggle.addEventListener("click", function () {
     searchMenu.classList.toggle("hidden");
@@ -143,6 +159,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function getParsed(currentFrom, currentTo) {
     const from = parseInt(currentFrom.value, 10);
     const to = parseInt(currentTo.value, 10);
+
+    // Debounced filterItems call
+    debouncedFilterItems({
+      price: {
+        from: fromInput.value,
+        to: toInput.value,
+      },
+    });
+
     return [from, to];
   }
 
@@ -257,6 +282,9 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     }
 
+    filterItems({
+      date: `${year}-${month + 1}-${selectedDay}`,
+    });
     calendarDays.innerHTML = weeks.join("");
 
     document
@@ -319,25 +347,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
     renderCalendar();
   }
-});
 
-const swiper = new Swiper("#intro-swiper .swiper", {
-  navigation: {
-    nextEl: "#intro-swiper .swiper-button-next",
-    prevEl: "#intro-swiper .swiper-button-prev",
-  },
-  slidesPerView: 1,
-  spaceBetween: 20,
-  breakpoints: {
-    660: {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-    },
-    1024: {
-      slidesPerView: "auto",
-      spaceBetween: 35,
-    },
-  },
+  const filterSearch = document.querySelectorAll("#filter-search");
+  filterSearch.forEach((item) => {
+    item.addEventListener("input", () => {
+      debouncedFilterItems({
+        search: item.value,
+      });
+    });
+  });
+
+  const promoChbx = document.querySelector("#promo-checkbox");
+  if (promoChbx) {
+    promoChbx.addEventListener("change", () => {
+      debouncedFilterItems({
+        discount: promoChbx.checked,
+      });
+    });
+  }
+
+  const sortByDate = document.querySelector("#sortByDate");
+  if (sortByDate) {
+    const icon = sortByDate.querySelector("img");
+
+    sortByDate.addEventListener("click", () => {
+      sortByDate.classList.toggle("active");
+      icon.classList.toggle("rotate-180");
+
+      debouncedFilterItems({
+        sortByDate: sortByDate.classList.contains("active") ? true : false,
+      });
+    });
+  }
+
+  const sortByPrice = document.querySelector("#sortByPrice");
+  if (sortByPrice) {
+    const icon = sortByPrice.querySelector("img");
+
+    sortByPrice.addEventListener("click", () => {
+      sortByPrice.classList.toggle("active");
+      icon.classList.toggle("rotate-180");
+
+      debouncedFilterItems({
+        sortByPrice: sortByPrice.classList.contains("active") ? true : false,
+      });
+    });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -395,3 +450,52 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
+
+const swiper = new Swiper("#intro-swiper .swiper", {
+  navigation: {
+    nextEl: "#intro-swiper .swiper-button-next",
+    prevEl: "#intro-swiper .swiper-button-prev",
+  },
+  slidesPerView: 1,
+  spaceBetween: 20,
+  breakpoints: {
+    660: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: "auto",
+      spaceBetween: 35,
+    },
+  },
+});
+
+function debounce(func, delay) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
+let filter = {};
+/*
+  Example:
+  filter: { 
+    date: "2023-01-01", 
+    price: {
+      from: 200,
+      to: 300
+    },
+    discount: true || false
+    sortByPrice: true || false
+    sortByDate: true || false
+    search: "test"
+  }
+*/
+
+function filterItems(params) {
+  filter = { ...filter, ...params };
+  console.log(filter);
+  // your filter logic here.
+}

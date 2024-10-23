@@ -183,6 +183,7 @@ import App from "../App.astro";
               class="rounded-[19px] py-[10px] flex items-center justify-between bg-[#EBEBEB] px-[20px] xl:hidden mt-[20px]"
             >
               <input
+                id="filter-search"
                 type="text"
                 class="outline-0 bg-transparent border-0 text-[16px] truncate"
                 placeholder="Поиск по названию"
@@ -191,6 +192,7 @@ import App from "../App.astro";
             </div>
           </div>
 
+          <!-- filter -->
           <div
             class="relative mt-3 md:mt-10 flex flex-col-reverse sm:flex-col md:flex-row items-center md:items-start gap-5 sm:gap-0 justify-between"
           >
@@ -199,22 +201,163 @@ import App from "../App.astro";
             >
               <div class="w-full md:w-fit flex gap-2.5 flex-col md:flex-row">
                 <div class="flex gap-[10px]">
-                  <p
-                    id="datePickerToggle"
-                    class="button py-2.5 text-[16px] w-36 sm:w-[50%] px-2 sm:px-6 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
-                  >
-                    Дата
-                    <img src="./assets/images/date.svg" alt="date" />
-                  </p>
-                  <p
-                    id="priceButton"
-                    class="button py-2.5 text-[16px] w-36 px-3 sm:px-6 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400 grow md:grow-0"
-                  >
-                    Цена
-                    <img src="./assets/images/price.svg" alt="price" />
-                  </p>
+                  <!-- Дата -->
+                  <div class="relative w-36 inline grow md:grow-0">
+                    <p
+                      id="datePickerToggle"
+                      class="button py-2.5 text-[16px] w-full px-2 sm:px-6 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
+                    >
+                      Дата
+                      <img src="./assets/images/date.svg" alt="date" />
+                    </p>
+
+                    <!-- Calendar -->
+                    <div id="calendar" class="absolute top-full left-0 hidden">
+                      <div id="datePicker">
+                        <div class="modal-content1">
+                          <div class="calendar-container">
+                            <img
+                              src="./assets/images/close_modal.png"
+                              alt="close"
+                              class="close-icon"
+                              id="closeCalendarModal"
+                            />
+                            <div class="calendar-controls pt-[30px]">
+                              <img
+                                src="./assets/images/double-left-chevron-svgrepo-com.svg"
+                                alt="arrow"
+                                id="prevYear"
+                                class="arrow-icon"
+                              />
+                              <img
+                                src="./assets/images/arrow-left-5-svgrepo-com.svg"
+                                alt="arrow"
+                                id="prevMonth"
+                                class="arrow-icon"
+                              />
+
+                              <p id="monthYear" class="month-year">Март 2023</p>
+                              <img
+                                src="./assets/images/right-arrow-svgrepo-com.svg"
+                                alt="arrow"
+                                id="nextMonth"
+                                class="arrow-icon"
+                              />
+                              <img
+                                src="./assets/images/double-right-chevron-svgrepo-com.svg"
+                                alt="arrow"
+                                id="nextYear"
+                                class="arrow-icon"
+                              />
+                            </div>
+                            <div class="days-of-week">
+                              <ul class="days-list">
+                                <li>Пн</li>
+                                <li>Вт</li>
+                                <li>Ср</li>
+                                <li>Чт</li>
+                                <li>Пт</li>
+                                <li class="weekend">Сб</li>
+                                <li class="weekend">Вс</li>
+                              </ul>
+                            </div>
+                            <div id="calendarDays" class="calendar-days"></div>
+                            <div class="weekend-info">
+                              <p>эти выходные · следующие</p>
+                              <p>эта неделя · следующая</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Цена -->
+                  <div class="relative w-36 inline grow md:grow-0">
+                    <div
+                      id="priceButton"
+                      class="button py-2.5 text-[16px] w-full px-3 sm:px-6 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
+                    >
+                      Цена
+                      <img src="./assets/images/price.svg" alt="price" />
+                    </div>
+
+                    <!-- Price range -->
+                    <div id="price" class="absolute top-full left-0 hidden">
+                      <div id="priceRangeModal">
+                        <div class="modal-content relative">
+                          <img
+                            src="./assets/images/close_modal.png"
+                            alt="close"
+                            class="cursor-pointer absolute right-5 top-5 close"
+                            id="closePriceRangeModal"
+                          />
+                          <div class="range_container w-full p-5">
+                            <h2 class="text-center font-semibold my-3">Цена</h2>
+                            <div
+                              class="form_control mb-[30px] flex gap-3 md:gap-5"
+                            >
+                              <div
+                                class="form_control_container flex items-center w-full h-[40px] rounded-full bg-[#EBEBEB] text-[#635a5a] px-[20px] md:px-[30px] gap-2"
+                              >
+                                <h3
+                                  class="form_control_container__time text-[17px]"
+                                >
+                                  От
+                                </h3>
+                                <input
+                                  class="form_control_container__time__input !text-[18px] outline-none text-[#635a5a] bg-transparent"
+                                  type="number"
+                                  id="fromInput"
+                                  value="180"
+                                  min="0"
+                                  max="1500"
+                                />
+                              </div>
+                              <div
+                                class="form_control_container flex items-center w-full h-[40px] rounded-full bg-[#EBEBEB] text-[#635a5a] px-[20px] md:px-[30px] gap-2"
+                              >
+                                <h3
+                                  class="form_control_container__time text-[17px]"
+                                >
+                                  До
+                                </h3>
+                                <input
+                                  class="form_control_container__time__input !text-[18px] outline-none text-[#635a5a] bg-transparent"
+                                  type="number"
+                                  id="toInput"
+                                  value="1500"
+                                  min="0"
+                                  max="1500"
+                                />
+                              </div>
+                            </div>
+                            <div class="sliders_control">
+                              <input
+                                id="fromSlider"
+                                type="range"
+                                value="10"
+                                min="0"
+                                max="1500"
+                                class="text-[16px]"
+                              />
+                              <input
+                                id="toSlider"
+                                type="range"
+                                value="400"
+                                min="0"
+                                max="1500"
+                                class="text-[16px]"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
+                <!-- Акции -->
                 <div class="checkbox-container md:w-50 sm:mt-0">
                   <label
                     class="checkbox-label w-full"
@@ -233,7 +376,7 @@ import App from "../App.astro";
               </div>
 
               <div class="w-full md:w-fit flex items-center gap-2.5">
-                <p
+                <div
                   id="sortByDate"
                   class="arrow grow md:grow-0 py-2.5 text-[16px] w-36 px-6 flex items-center justify-center gap-3 rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
                 >
@@ -241,10 +384,10 @@ import App from "../App.astro";
                   <img
                     src="./assets/images/arrow.svg"
                     alt="date"
-                    class="arrow_img"
+                    class="transition-transform duration-200"
                   />
-                </p>
-                <p
+                </div>
+                <div
                   id="sortByPrice"
                   class="arrow grow md:grow-0 py-2.5 text-[16px] w-36 px-6 flex items-center justify-center gap-3 rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
                 >
@@ -252,146 +395,19 @@ import App from "../App.astro";
                   <img
                     src="./assets/images/arrow.svg"
                     alt="date"
-                    class="arrow_img"
+                    class="transition-transform duration-200"
                   />
-                </p>
+                </div>
                 <div
                   class="rounded-full py-2.5 ml-2.5 xl:flex items-center justify-between bg-gray-200 px-[30px] hidden"
                 >
                   <input
                     type="text"
-                    id="searchInput"
+                    id="filter-search"
                     class="w-30 md:w-45 outline-0 bg-transparent border-0 text-[16px] truncate"
                     placeholder="Поиск по названию"
                   />
                   <img src="./assets/images/search.svg" alt="search" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Calendar -->
-          <div id="calendar" class="hidden">
-            <div id="datePicker">
-              <div class="modal-content1">
-                <div class="calendar-container">
-                  <img
-                    src="./assets/images/close_modal.png"
-                    alt="close"
-                    class="close-icon"
-                    id="closeCalendarModal"
-                  />
-                  <div class="calendar-controls pt-[30px]">
-                    <img
-                      src="./assets/images/double-left-chevron-svgrepo-com.svg"
-                      alt="arrow"
-                      id="prevYear"
-                      class="arrow-icon"
-                    />
-                    <img
-                      src="./assets/images/arrow-left-5-svgrepo-com.svg"
-                      alt="arrow"
-                      id="prevMonth"
-                      class="arrow-icon"
-                    />
-
-                    <p id="monthYear" class="month-year">Март 2023</p>
-                    <img
-                      src="./assets/images/right-arrow-svgrepo-com.svg"
-                      alt="arrow"
-                      id="nextMonth"
-                      class="arrow-icon"
-                    />
-                    <img
-                      src="./assets/images/double-right-chevron-svgrepo-com.svg"
-                      alt="arrow"
-                      id="nextYear"
-                      class="arrow-icon"
-                    />
-                  </div>
-                  <div class="days-of-week">
-                    <ul class="days-list">
-                      <li>Пн</li>
-                      <li>Вт</li>
-                      <li>Ср</li>
-                      <li>Чт</li>
-                      <li>Пт</li>
-                      <li class="weekend">Сб</li>
-                      <li class="weekend">Вс</li>
-                    </ul>
-                  </div>
-                  <div id="calendarDays" class="calendar-days"></div>
-                  <div class="weekend-info">
-                    <p>эти выходные · следующие</p>
-                    <p>эта неделя · следующая</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Price range -->
-          <div id="price" class="hidden">
-            <div id="priceRangeModal">
-              <div class="modal-content relative">
-                <img
-                  src="./assets/images/close_modal.png"
-                  alt="close"
-                  class="cursor-pointer absolute right-3 top-3 close"
-                  id="closePriceRangeModal"
-                />
-                <div class="range_container">
-                  <h2 class="text-center font-semibold my-3">Цена</h2>
-                  <div class="form_control mb-[30px] flex gap-3 md:gap-5">
-                    <div
-                      class="form_control_container flex items-center w-full sm:w-[150px] h-[40px] rounded-full bg-[#EBEBEB] text-[#635a5a] px-[20px] md:px-[30px] gap-2"
-                    >
-                      <h3 class="form_control_container__time text-[17px]">
-                        От
-                      </h3>
-                      <input
-                        class="form_control_container__time__input !text-[18px] outline-none text-[#635a5a] bg-transparent"
-                        type="number"
-                        id="fromInput"
-                        value="180"
-                        min="0"
-                        max="1500"
-                      />
-                    </div>
-                    <div
-                      class="form_control_container flex items-center w-full sm:w-[150px] h-[40px] rounded-full bg-[#EBEBEB] text-[#635a5a] px-[20px] md:px-[30px] gap-2"
-                    >
-                      <h3 class="form_control_container__time text-[17px]">
-                        До
-                      </h3>
-                      <input
-                        class="form_control_container__time__input !text-[18px] outline-none text-[#635a5a] bg-transparent"
-                        type="number"
-                        id="toInput"
-                        value="1500"
-                        min="0"
-                        max="1500"
-                      />
-                    </div>
-                  </div>
-                  <div class="sliders_control">
-                    <input
-                      id="fromSlider"
-                      type="range"
-                      value="10"
-                      min="0"
-                      max="1500"
-                      class="text-[16px]"
-                    />
-                    <input
-                      id="toSlider"
-                      type="range"
-                      value="400"
-                      min="0"
-                      max="1500"
-                      class="text-[16px]"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
