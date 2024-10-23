@@ -464,21 +464,15 @@ input::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   background: #d82424;
-  top: 70%;
+  top: 100px;
   right: 0;
   width: 100%;
   height: 100px;
   overflow: hidden;
   transition: 0.2s ease-in-out;
   z-index: 99;
-}
-
-@media screen and (max-width: 768px) {
-  #searchMenu {
-    top: 110%;
-  }
 }
 
 #searchMenu.hidden {
