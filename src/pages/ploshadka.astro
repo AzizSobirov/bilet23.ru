@@ -72,8 +72,8 @@ import App from "../App.astro";
           </p>
         </div>
 
-        <!--   Мероприятия дворца зимнего спорта «Айсберг» -->
-        <div class="relative">
+        <!--  Мероприятия дворца зимнего спорта «Айсберг» -->
+        <div class="mt-10 relative">
           <h1 class="text-[20px] sm:text-[24px] lg:text-[32px] font-semibold">
             Мероприятия дворца зимнего спорта «Айсберг»
           </h1>
@@ -261,7 +261,7 @@ import App from "../App.astro";
                 <!-- Акции -->
                 <div class="checkbox-container md:w-50 sm:mt-0">
                   <label
-                    class="checkbox-label w-full"
+                    class="checkbox-label w-full rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
                     for="promo-checkbox"
                     id="checkbox_text"
                   >
@@ -321,7 +321,7 @@ import App from "../App.astro";
             class="mt-8 md:mt-10 w-full flex flex-wrap gap-x-5 md:gap-x-6 lg:gap-x-5 gap-y-10"
           >
             {
-              Array.from({ length: 12 }).map((item, idx) => (
+              Array.from({ length: 8 }).map((item, idx) => (
                 <div class="card grow sm:basis-[220px]">
                   <div class="relative h-[154px] sm:h-[120px] xl:h-[154px] rounded-xl overflow-hidden">
                     {idx == 0 && (
@@ -363,32 +363,32 @@ import App from "../App.astro";
                     </span>
                   </div>
 
-                  <div class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]">
+                  <div class="text-[20px] font-bold  max-w-[274px] mt-[15px] leading-[1.2]">
                     На солнце, вдоль рядов кукурузы
                   </div>
 
-                  <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                  <p class="lg:mt-[10] mt-[15px] text-[14px]  text-[#999999]">
                     18 марта · СБ · 12:00
                   </p>
                   <a
                     href="./ploshadka.html"
                     target="_blank"
-                    class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                    class="mt-[10px] block text-[14px]  text-[#999999]"
                   >
                     ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                   </a>
 
-                  <div class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white ">
+                  <div class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs ">
                     <a
                       href="#"
-                      class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center "
+                      class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center "
                     >
                       Купить билеты
                     </a>
                     {idx % 2 == 0 && (
                       <a
                         href="#"
-                        class="h-8 grow basis-28 rounded-[50px] bg-[#1206F9] flex items-center justify-center "
+                        class="h-8 grow basis-28 rounded-[50px] bg-[#f3f3f3] hover:bg-[#1206F9] hover:text-white flex items-center justify-center "
                       >
                         Пушкинская карта
                       </a>
@@ -402,7 +402,7 @@ import App from "../App.astro";
           <!-- show more button -->
           <div class="flex justify-center items-center mx-auto">
             <p
-              class="text-[#F71313] sm:w-full rounded-[40px] border border-[#F71313] py-[12.5px] text-center hover:bg-[#F71313] hover:text-white transition-all mt-[40px] cursor-pointer w-[300px] mx-auto"
+              class="text-[#F71313] w-full rounded-[40px] border border-[#F71313] py-[10px] text-center hover:bg-[#F71313] hover:text-white transition-all mt-[40px] cursor-pointer"
             >
               Смотреть больше мероприятий
             </p>

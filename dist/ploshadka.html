@@ -9,13 +9,13 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <title>Bilet23.ru</title>
-    <link rel="stylesheet" href="/assets/css/app.CdT8BUUp.css" />
+    <link rel="stylesheet" href="/assets/css/app.C_Ph12yU.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="bg-[#F71313]">
       <div
-        class="px-5 xl:px-0 max-w-[1160px] mx-auto py-[25px] flex items-center justify-between"
+        class="px-5 xl:px-0 max-w-[1160px] mx-auto py-[26px] flex items-center justify-between"
       >
         <!-- Logo -->
         <a
@@ -32,11 +32,11 @@
           </div>
         </a>
         <div
-          class="bg-transparent xl:bg-[#FFFFFF] xl:rounded-[30px] py-[18px] flex items-center justify-between xl:px-[24px]"
+          class="bg-transparent xl:bg-[#FFFFFF] xl:rounded-[30px] py-[16px] flex items-center justify-between xl:px-[24px]"
         >
           <input
             type="text"
-            class="hidden xl:flex w-[500px] xl:w-[650px] outline-0 border-0 text-[18px]"
+            class="hidden xl:flex w-[500px] xl:w-[650px] outline-0 border-0"
             placeholder="Поиск по мероприятиям"
           />
           <img
@@ -61,11 +61,11 @@
             </div>
           </div>
         </div>
-        <a
-          href="tel:79991234567"
-          class="hidden xl:flex text-[#fff] text-[18px] hover:underline"
-          >+7 999 123-45-67</a
-        >
+        <div class="hidden xl:flex gap-2">
+          <a href="#"> <img src="./assets/images/telegram.svg" alt="" /> </a>
+          <a href="#"> <img src="./assets/images/whatsapp.svg" alt="" /> </a>
+          <a href="#"> <img src="./assets/images/vk.svg" alt="" /> </a>
+        </div>
       </div>
       <nav
         class="flex items-center justify-between max-w-[1160px] mx-auto xl:hidden"
@@ -105,13 +105,18 @@
             >
           </li>
           <li>
+            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+              >Площадки</a
+            >
+          </li>
+          <li>
             <a
               href="tel:79991234567"
               class="text-[#fff] text-[18px] hover:underline"
               >+7 999 123-45-67</a
             >
           </li>
-          <li>
+          <li class="mt-2">
             <a
               href="#"
               class="border border-white rounded-[30px] py-[11px] px-[27px] text-[18px] text-white hover:bg-white hover:text-[#F71313] transition-all"
@@ -146,33 +151,22 @@
       </div>
       <div class="flex justify-center items-center">
         <div
-          class="max-w-[1160px] w-full justify-between py-[10px] hidden xl:flex"
+          class="max-w-[1160px] w-full justify-between pb-[14px] hidden xl:flex"
         >
           <div
             class="hidden xl:flex px-[30px] xl:px-0 items-center justify-start gap-[40px]"
           >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Спектакли</a
-            >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Концерты</a
-            >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Фестивали</a
-            >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Мюзиклы</a
-            >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Детям</a
-            >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Классика</a
-            >
+            <a href="#" class="text-[#fff] hover:opacity-70">Спектакли</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Концерты</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Фестивали</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Мюзиклы</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Детям</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Классика</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Площадки</a>
           </div>
           <a
             href="#"
-            class="hidden lg:flex border border-white rounded-[30px] py-[11px] px-[27px] text-[18px] text-white hover:bg-white hover:text-[#F71313] transition-all"
+            class="hidden lg:flex border border-white rounded-[30px] py-[8px] px-[28px] text-white hover:bg-white hover:text-[#F71313] transition-all"
             >Подобрать мероприятие</a
           >
         </div>
@@ -241,8 +235,8 @@
               Олимпийский проспект, с1, посёлок городского типа Сириус, 354340
             </p>
           </div>
-          <!--   Мероприятия дворца зимнего спорта «Айсберг» -->
-          <div class="relative">
+          <!--  Мероприятия дворца зимнего спорта «Айсберг» -->
+          <div class="mt-10 relative">
             <h1 class="text-[20px] sm:text-[24px] lg:text-[32px] font-semibold">
               Мероприятия дворца зимнего спорта «Айсберг»
             </h1>
@@ -433,7 +427,7 @@
                   <!-- Акции -->
                   <div class="checkbox-container md:w-50 sm:mt-0">
                     <label
-                      class="checkbox-label w-full"
+                      class="checkbox-label w-full rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
                       for="promo-checkbox"
                       id="checkbox_text"
                     >
@@ -515,32 +509,32 @@
                   </span>
                 </div>
                 <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
+                  class="text-[20px] font-bold max-w-[274px] mt-[15px] leading-[1.2]"
                 >
                   На солнце, вдоль рядов кукурузы
                 </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                <p class="lg:mt-[10] mt-[15px] text-[14px] text-[#999999]">
                   18 марта · СБ · 12:00
                 </p>
                 <a
                   href="./ploshadka.html"
                   target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                  class="mt-[10px] block text-[14px] text-[#999999]"
                 >
                   ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                 </a>
                 <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
+                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs"
                 >
                   <a
                     href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
+                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center"
                   >
                     Купить билеты
                   </a>
                   <a
                     href="#"
-                    class="h-8 grow basis-28 rounded-[50px] bg-[#1206F9] flex items-center justify-center"
+                    class="h-8 grow basis-28 rounded-[50px] bg-[#f3f3f3] hover:bg-[#1206F9] hover:text-white flex items-center justify-center"
                   >
                     Пушкинская карта
                   </a>
@@ -572,26 +566,26 @@
                   </span>
                 </div>
                 <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
+                  class="text-[20px] font-bold max-w-[274px] mt-[15px] leading-[1.2]"
                 >
                   На солнце, вдоль рядов кукурузы
                 </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                <p class="lg:mt-[10] mt-[15px] text-[14px] text-[#999999]">
                   18 марта · СБ · 12:00
                 </p>
                 <a
                   href="./ploshadka.html"
                   target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                  class="mt-[10px] block text-[14px] text-[#999999]"
                 >
                   ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                 </a>
                 <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
+                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs"
                 >
                   <a
                     href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
+                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center"
                   >
                     Купить билеты
                   </a>
@@ -618,32 +612,32 @@
                   </span>
                 </div>
                 <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
+                  class="text-[20px] font-bold max-w-[274px] mt-[15px] leading-[1.2]"
                 >
                   На солнце, вдоль рядов кукурузы
                 </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                <p class="lg:mt-[10] mt-[15px] text-[14px] text-[#999999]">
                   18 марта · СБ · 12:00
                 </p>
                 <a
                   href="./ploshadka.html"
                   target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                  class="mt-[10px] block text-[14px] text-[#999999]"
                 >
                   ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                 </a>
                 <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
+                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs"
                 >
                   <a
                     href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
+                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center"
                   >
                     Купить билеты
                   </a>
                   <a
                     href="#"
-                    class="h-8 grow basis-28 rounded-[50px] bg-[#1206F9] flex items-center justify-center"
+                    class="h-8 grow basis-28 rounded-[50px] bg-[#f3f3f3] hover:bg-[#1206F9] hover:text-white flex items-center justify-center"
                   >
                     Пушкинская карта
                   </a>
@@ -670,26 +664,26 @@
                   </span>
                 </div>
                 <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
+                  class="text-[20px] font-bold max-w-[274px] mt-[15px] leading-[1.2]"
                 >
                   На солнце, вдоль рядов кукурузы
                 </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                <p class="lg:mt-[10] mt-[15px] text-[14px] text-[#999999]">
                   18 марта · СБ · 12:00
                 </p>
                 <a
                   href="./ploshadka.html"
                   target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                  class="mt-[10px] block text-[14px] text-[#999999]"
                 >
                   ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                 </a>
                 <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
+                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs"
                 >
                   <a
                     href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
+                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center"
                   >
                     Купить билеты
                   </a>
@@ -716,32 +710,32 @@
                   </span>
                 </div>
                 <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
+                  class="text-[20px] font-bold max-w-[274px] mt-[15px] leading-[1.2]"
                 >
                   На солнце, вдоль рядов кукурузы
                 </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                <p class="lg:mt-[10] mt-[15px] text-[14px] text-[#999999]">
                   18 марта · СБ · 12:00
                 </p>
                 <a
                   href="./ploshadka.html"
                   target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                  class="mt-[10px] block text-[14px] text-[#999999]"
                 >
                   ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                 </a>
                 <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
+                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs"
                 >
                   <a
                     href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
+                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center"
                   >
                     Купить билеты
                   </a>
                   <a
                     href="#"
-                    class="h-8 grow basis-28 rounded-[50px] bg-[#1206F9] flex items-center justify-center"
+                    class="h-8 grow basis-28 rounded-[50px] bg-[#f3f3f3] hover:bg-[#1206F9] hover:text-white flex items-center justify-center"
                   >
                     Пушкинская карта
                   </a>
@@ -768,26 +762,26 @@
                   </span>
                 </div>
                 <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
+                  class="text-[20px] font-bold max-w-[274px] mt-[15px] leading-[1.2]"
                 >
                   На солнце, вдоль рядов кукурузы
                 </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                <p class="lg:mt-[10] mt-[15px] text-[14px] text-[#999999]">
                   18 марта · СБ · 12:00
                 </p>
                 <a
                   href="./ploshadka.html"
                   target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                  class="mt-[10px] block text-[14px] text-[#999999]"
                 >
                   ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                 </a>
                 <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
+                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs"
                 >
                   <a
                     href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
+                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center"
                   >
                     Купить билеты
                   </a>
@@ -814,32 +808,32 @@
                   </span>
                 </div>
                 <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
+                  class="text-[20px] font-bold max-w-[274px] mt-[15px] leading-[1.2]"
                 >
                   На солнце, вдоль рядов кукурузы
                 </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                <p class="lg:mt-[10] mt-[15px] text-[14px] text-[#999999]">
                   18 марта · СБ · 12:00
                 </p>
                 <a
                   href="./ploshadka.html"
                   target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                  class="mt-[10px] block text-[14px] text-[#999999]"
                 >
                   ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                 </a>
                 <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
+                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs"
                 >
                   <a
                     href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
+                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center"
                   >
                     Купить билеты
                   </a>
                   <a
                     href="#"
-                    class="h-8 grow basis-28 rounded-[50px] bg-[#1206F9] flex items-center justify-center"
+                    class="h-8 grow basis-28 rounded-[50px] bg-[#f3f3f3] hover:bg-[#1206F9] hover:text-white flex items-center justify-center"
                   >
                     Пушкинская карта
                   </a>
@@ -866,222 +860,26 @@
                   </span>
                 </div>
                 <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
+                  class="text-[20px] font-bold max-w-[274px] mt-[15px] leading-[1.2]"
                 >
                   На солнце, вдоль рядов кукурузы
                 </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                <p class="lg:mt-[10] mt-[15px] text-[14px] text-[#999999]">
                   18 марта · СБ · 12:00
                 </p>
                 <a
                   href="./ploshadka.html"
                   target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                  class="mt-[10px] block text-[14px] text-[#999999]"
                 >
                   ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                 </a>
                 <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
+                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs"
                 >
                   <a
                     href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
-                  >
-                    Купить билеты
-                  </a>
-                </div>
-              </div>
-              <div class="card grow sm:basis-[220px]">
-                <div
-                  class="relative h-[154px] sm:h-[120px] xl:h-[154px] rounded-xl overflow-hidden"
-                >
-                  <img
-                    class="w-full h-full object-cover"
-                    src="./assets/images/card4.png"
-                    alt="card"
-                  />
-                  <span
-                    class="absolute left-[10px] md:left-[20px] top-[10px] md:top-[20px] text-[12px] text-white py-[5px] px-[14px] bg-[#242424] rounded-[40px]"
-                  >
-                    Театр · 6+
-                  </span>
-                  <span
-                    class="absolute right-[10px] md:right-[20px] bottom-[10px] md:bottom-5 text-[12px] text-white py-[5px] px-[14px] bg-[#F71313] rounded-[40px]"
-                  >
-                    от 12 500 ₽
-                  </span>
-                </div>
-                <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
-                >
-                  На солнце, вдоль рядов кукурузы
-                </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
-                  18 марта · СБ · 12:00
-                </p>
-                <a
-                  href="./ploshadka.html"
-                  target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
-                >
-                  ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
-                </a>
-                <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
-                >
-                  <a
-                    href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
-                  >
-                    Купить билеты
-                  </a>
-                  <a
-                    href="#"
-                    class="h-8 grow basis-28 rounded-[50px] bg-[#1206F9] flex items-center justify-center"
-                  >
-                    Пушкинская карта
-                  </a>
-                </div>
-              </div>
-              <div class="card grow sm:basis-[220px]">
-                <div
-                  class="relative h-[154px] sm:h-[120px] xl:h-[154px] rounded-xl overflow-hidden"
-                >
-                  <img
-                    class="w-full h-full object-cover"
-                    src="./assets/images/card4.png"
-                    alt="card"
-                  />
-                  <span
-                    class="absolute left-[10px] md:left-[20px] top-[10px] md:top-[20px] text-[12px] text-white py-[5px] px-[14px] bg-[#242424] rounded-[40px]"
-                  >
-                    Театр · 6+
-                  </span>
-                  <span
-                    class="absolute right-[10px] md:right-[20px] bottom-[10px] md:bottom-5 text-[12px] text-white py-[5px] px-[14px] bg-[#F71313] rounded-[40px]"
-                  >
-                    от 12 500 ₽
-                  </span>
-                </div>
-                <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
-                >
-                  На солнце, вдоль рядов кукурузы
-                </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
-                  18 марта · СБ · 12:00
-                </p>
-                <a
-                  href="./ploshadka.html"
-                  target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
-                >
-                  ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
-                </a>
-                <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
-                >
-                  <a
-                    href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
-                  >
-                    Купить билеты
-                  </a>
-                </div>
-              </div>
-              <div class="card grow sm:basis-[220px]">
-                <div
-                  class="relative h-[154px] sm:h-[120px] xl:h-[154px] rounded-xl overflow-hidden"
-                >
-                  <img
-                    class="w-full h-full object-cover"
-                    src="./assets/images/card4.png"
-                    alt="card"
-                  />
-                  <span
-                    class="absolute left-[10px] md:left-[20px] top-[10px] md:top-[20px] text-[12px] text-white py-[5px] px-[14px] bg-[#242424] rounded-[40px]"
-                  >
-                    Театр · 6+
-                  </span>
-                  <span
-                    class="absolute right-[10px] md:right-[20px] bottom-[10px] md:bottom-5 text-[12px] text-white py-[5px] px-[14px] bg-[#F71313] rounded-[40px]"
-                  >
-                    от 12 500 ₽
-                  </span>
-                </div>
-                <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
-                >
-                  На солнце, вдоль рядов кукурузы
-                </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
-                  18 марта · СБ · 12:00
-                </p>
-                <a
-                  href="./ploshadka.html"
-                  target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
-                >
-                  ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
-                </a>
-                <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
-                >
-                  <a
-                    href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
-                  >
-                    Купить билеты
-                  </a>
-                  <a
-                    href="#"
-                    class="h-8 grow basis-28 rounded-[50px] bg-[#1206F9] flex items-center justify-center"
-                  >
-                    Пушкинская карта
-                  </a>
-                </div>
-              </div>
-              <div class="card grow sm:basis-[220px]">
-                <div
-                  class="relative h-[154px] sm:h-[120px] xl:h-[154px] rounded-xl overflow-hidden"
-                >
-                  <img
-                    class="w-full h-full object-cover"
-                    src="./assets/images/card4.png"
-                    alt="card"
-                  />
-                  <span
-                    class="absolute left-[10px] md:left-[20px] top-[10px] md:top-[20px] text-[12px] text-white py-[5px] px-[14px] bg-[#242424] rounded-[40px]"
-                  >
-                    Театр · 6+
-                  </span>
-                  <span
-                    class="absolute right-[10px] md:right-[20px] bottom-[10px] md:bottom-5 text-[12px] text-white py-[5px] px-[14px] bg-[#F71313] rounded-[40px]"
-                  >
-                    от 12 500 ₽
-                  </span>
-                </div>
-                <div
-                  class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]"
-                >
-                  На солнце, вдоль рядов кукурузы
-                </div>
-                <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
-                  18 марта · СБ · 12:00
-                </p>
-                <a
-                  href="./ploshadka.html"
-                  target="_blank"
-                  class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
-                >
-                  ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
-                </a>
-                <div
-                  class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white"
-                >
-                  <a
-                    href="#"
-                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center"
+                    class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center"
                   >
                     Купить билеты
                   </a>
@@ -1091,7 +889,7 @@
             <!-- show more button -->
             <div class="flex justify-center items-center mx-auto">
               <p
-                class="text-[#F71313] sm:w-full rounded-[40px] border border-[#F71313] py-[12.5px] text-center hover:bg-[#F71313] hover:text-white transition-all mt-[40px] cursor-pointer w-[300px] mx-auto"
+                class="text-[#F71313] w-full rounded-[40px] border border-[#F71313] py-[10px] text-center hover:bg-[#F71313] hover:text-white transition-all mt-[40px] cursor-pointer"
               >
                 Смотреть больше мероприятий
               </p>
@@ -1222,7 +1020,7 @@
             BILET23.RU
           </h1>
         </div>
-        <div class="text-[14px] md:text-[18px] flex flex-col items-start">
+        <div class="text-[14px] md:text-base flex flex-col items-start">
           <a href="#" class="text-white hover:underline"
             >109004, Москва, ул. Станиславского, д. 21, стр. 3</a
           >
@@ -1323,6 +1121,6 @@
     </footer>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./assets/js/app.js?v=1.2"></script>
+    <script src="./assets/js/app.js?v=2"></script>
   </body>
 </html>

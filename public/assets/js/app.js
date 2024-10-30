@@ -86,6 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   searchToggle.addEventListener("click", function () {
     searchMenu.classList.toggle("hidden");
+    hamburgerMenu.classList.remove("open");
+    hamburgerMenuToggle.classList.remove("close");
   });
 
   closeSearch.addEventListener("click", function () {
@@ -95,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
   hamburgerMenuToggle.addEventListener("click", function () {
     hamburgerMenu.classList.toggle("open");
     hamburgerMenuToggle.classList.toggle("close");
+    searchMenu.classList.add("hidden");
   });
 
   const chbx = document.getElementById("promo-checkbox");
@@ -458,6 +461,17 @@ const swiper = new Swiper("#intro-swiper .swiper", {
   },
   slidesPerView: 1,
   spaceBetween: 20,
+  pagination: {
+    el: "#intro-swiper .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className, length) {
+      var totalSlides = document.querySelectorAll(
+        "#intro-swiper .swiper-slide"
+      );
+
+      return `<span style='width: ${100 / totalSlides.length}%;' class='${className}'></span>`;
+    },
+  },
   breakpoints: {
     660: {
       slidesPerView: "auto",

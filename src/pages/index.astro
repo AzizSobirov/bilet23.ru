@@ -25,7 +25,7 @@ import App from "../App.astro";
               Спектакль · 12+
             </p>
             <div
-              class="absolute bottom-[55px] md:bottom-[20px] left-[20px] md:left-[60px]"
+              class="absolute bottom-[80px] md:bottom-[20px] left-[20px] md:left-[60px]"
             >
               <div>
                 <p class="text-white text-[16px] md:text-[24px] font-semibold">
@@ -40,7 +40,7 @@ import App from "../App.astro";
               </div>
             </div>
             <p
-              class="absolute left-[20px] md:left-[76%] md:bottom-[20px] lg:left-[83%] lg:right-[30px] bottom-[15px] lg:bottom-[30px] bg-[#F71313] rounded-[40px] py-[4px] lg:py-[9px] px-[13px] text-[14px] text-white w-[100px]"
+              class="absolute left-[20px] md:left-[76%] bottom-[40px] md:bottom-[20px] lg:left-[83%] lg:right-[30px] lg:bottom-[30px] bg-[#F71313] rounded-[40px] py-[4px] lg:py-[9px] px-[13px] text-[14px] text-white w-[100px]"
             >
               от 12 500 ₽
             </p>
@@ -59,7 +59,7 @@ import App from "../App.astro";
               Спектакль · 12+
             </p>
             <div
-              class="absolute bottom-[55px] md:bottom-[20px] left-[20px] md:left-[60px]"
+              class="absolute bottom-[80px] md:bottom-[20px] left-[20px] md:left-[60px]"
             >
               <div>
                 <p class="text-white text-[16px] md:text-[24px] font-semibold">
@@ -74,15 +74,22 @@ import App from "../App.astro";
               </div>
             </div>
             <p
-              class="absolute left-[20px] md:left-[76%] md:bottom-[20px] lg:left-[83%] lg:right-[30px] bottom-[15px] lg:bottom-[30px] bg-[#F71313] rounded-[40px] py-[4px] lg:py-[9px] px-[13px] text-[14px] text-white w-[100px]"
+              class="absolute left-[20px] md:left-[76%] bottom-[40px] md:bottom-[20px] lg:left-[83%] lg:right-[30px] lg:bottom-[30px] bg-[#F71313] rounded-[40px] py-[4px] lg:py-[9px] px-[13px] text-[14px] text-white w-[100px]"
             >
               от 12 500 ₽
             </p>
           </div>
         </div>
       </div>
-      <div class="swiper-button-prev xl:!left-0 xl:-translate-x-1/2"></div>
-      <div class="swiper-button-next xl:!right-0 xl:translate-x-1/2"></div>
+      <div
+        class="swiper-button-prev xl:!left-0 xl:-translate-x-1/2 hidden md:flex"
+      >
+      </div>
+      <div
+        class="swiper-button-next xl:!right-0 xl:translate-x-1/2 hidden md:flex"
+      >
+      </div>
+      <div class="swiper-pagination md:!hidden"></div>
     </section>
 
     <!-- Билеты -->
@@ -360,7 +367,7 @@ import App from "../App.astro";
                 <!-- Акции -->
                 <div class="checkbox-container md:w-50 sm:mt-0">
                   <label
-                    class="checkbox-label w-full"
+                    class="checkbox-label w-full rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
                     for="promo-checkbox"
                     id="checkbox_text"
                   >
@@ -477,17 +484,17 @@ import App from "../App.astro";
                     ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                   </a>
 
-                  <div class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white ">
+                  <div class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs  ">
                     <a
                       href="#"
-                      class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center "
+                      class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center "
                     >
                       Купить билеты
                     </a>
                     {idx % 2 == 0 && (
                       <a
                         href="#"
-                        class="h-8 grow basis-28 rounded-[50px] bg-[#1206F9] flex items-center justify-center "
+                        class="h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#1206F9]  hover:text-white transition-all duration-150 flex items-center justify-center "
                       >
                         Пушкинская карта
                       </a>

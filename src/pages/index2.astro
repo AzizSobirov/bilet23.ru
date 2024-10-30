@@ -25,7 +25,7 @@ import App from "../App.astro";
               Спектакль · 12+
             </p>
             <div
-              class="absolute bottom-[55px] md:bottom-[20px] left-[20px] md:left-[60px]"
+              class="absolute bottom-[80px] md:bottom-[20px] left-[20px] md:left-[60px]"
             >
               <div>
                 <p class="text-white text-[16px] md:text-[24px] font-semibold">
@@ -40,7 +40,7 @@ import App from "../App.astro";
               </div>
             </div>
             <p
-              class="absolute left-[20px] md:left-[76%] md:bottom-[20px] lg:left-[83%] lg:right-[30px] bottom-[15px] lg:bottom-[30px] bg-[#F71313] rounded-[40px] py-[4px] lg:py-[9px] px-[13px] text-[14px] text-white w-[100px]"
+              class="absolute left-[20px] md:left-[76%] bottom-[40px] md:bottom-[20px] lg:left-[83%] lg:right-[30px] lg:bottom-[30px] bg-[#F71313] rounded-[40px] py-[4px] lg:py-[9px] px-[13px] text-[14px] text-white w-[100px]"
             >
               от 12 500 ₽
             </p>
@@ -59,7 +59,7 @@ import App from "../App.astro";
               Спектакль · 12+
             </p>
             <div
-              class="absolute bottom-[55px] md:bottom-[20px] left-[20px] md:left-[60px]"
+              class="absolute bottom-[80px] md:bottom-[20px] left-[20px] md:left-[60px]"
             >
               <div>
                 <p class="text-white text-[16px] md:text-[24px] font-semibold">
@@ -74,15 +74,22 @@ import App from "../App.astro";
               </div>
             </div>
             <p
-              class="absolute left-[20px] md:left-[76%] md:bottom-[20px] lg:left-[83%] lg:right-[30px] bottom-[15px] lg:bottom-[30px] bg-[#F71313] rounded-[40px] py-[4px] lg:py-[9px] px-[13px] text-[14px] text-white w-[100px]"
+              class="absolute left-[20px] md:left-[76%] bottom-[40px] md:bottom-[20px] lg:left-[83%] lg:right-[30px] lg:bottom-[30px] bg-[#F71313] rounded-[40px] py-[4px] lg:py-[9px] px-[13px] text-[14px] text-white w-[100px]"
             >
               от 12 500 ₽
             </p>
           </div>
         </div>
       </div>
-      <div class="swiper-button-prev xl:!left-0 xl:-translate-x-1/2"></div>
-      <div class="swiper-button-next xl:!right-0 xl:translate-x-1/2"></div>
+      <div
+        class="swiper-button-prev xl:!left-0 xl:-translate-x-1/2 hidden md:flex"
+      >
+      </div>
+      <div
+        class="swiper-button-next xl:!right-0 xl:translate-x-1/2 hidden md:flex"
+      >
+      </div>
+      <div class="swiper-pagination md:!hidden"></div>
     </section>
 
     <!-- Билеты -->
@@ -360,7 +367,7 @@ import App from "../App.astro";
                 <!-- Акции -->
                 <div class="checkbox-container md:w-50 sm:mt-0">
                   <label
-                    class="checkbox-label w-full"
+                    class="checkbox-label w-full rounded-full hover:bg-gray-300 cursor-pointer bg-gray-200 text-gray-400"
                     for="promo-checkbox"
                     id="checkbox_text"
                   >
@@ -462,32 +469,32 @@ import App from "../App.astro";
                     </span>
                   </div>
 
-                  <div class="text-[20px] font-bold ml-1 max-w-[274px] mt-[15px] leading-[1.2]">
+                  <div class="text-[20px] font-bold  max-w-[274px] mt-[15px] leading-[1.2]">
                     На солнце, вдоль рядов кукурузы
                   </div>
 
-                  <p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
+                  <p class="lg:mt-[10] mt-[15px] text-[14px]  text-[#999999]">
                     18 марта · СБ · 12:00
                   </p>
                   <a
                     href="./ploshadka.html"
                     target="_blank"
-                    class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]"
+                    class="mt-[10px] block text-[14px]  text-[#999999]"
                   >
                     ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
                   </a>
 
-                  <div class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs text-white ">
+                  <div class="mt-5 w-full flex flex-wrap justify-center gap-2 text-xs ">
                     <a
                       href="#"
-                      class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F71313] flex items-center justify-center "
+                      class="mt-auto h-8 grow basis-28 rounded-[50px] bg-[#F3F3F3] hover:bg-[#F71313] hover:text-white transition-all duration-150 flex items-center justify-center "
                     >
                       Купить билеты
                     </a>
                     {idx % 2 == 0 && (
                       <a
                         href="#"
-                        class="h-8 grow basis-28 rounded-[50px] bg-[#1206F9] flex items-center justify-center "
+                        class="h-8 grow basis-28 rounded-[50px] bg-[#f3f3f3] hover:bg-[#1206F9] hover:text-white flex items-center justify-center "
                       >
                         Пушкинская карта
                       </a>
@@ -501,7 +508,7 @@ import App from "../App.astro";
           <!-- show more button -->
           <div class="flex justify-center items-center mx-auto">
             <p
-              class="text-[#F71313] sm:w-full rounded-[40px] border border-[#F71313] py-[12.5px] text-center hover:bg-[#F71313] hover:text-white transition-all mt-[40px] cursor-pointer w-[300px] mx-auto"
+              class="text-[#F71313] w-full rounded-[40px] border border-[#F71313] py-[10px] text-center hover:bg-[#F71313] hover:text-white transition-all mt-[40px] cursor-pointer"
             >
               Смотреть больше мероприятий
             </p>
@@ -516,46 +523,38 @@ import App from "../App.astro";
       <img
         src="./assets/images/Mask group.png"
         alt="404"
-        class="mt-10 lg:mt-12 xl:mt-[60px] w-full h-[345px] sm:h-[180px] md:h-[245px] lg:h-[370px] object-cover rounded-[10px] sm:rounded-[15px] md:rounded-[30px]"
+        class="mt-10 lg:mt-12 xl:mt-[60px] w-full h-[160px] sm:h-[180px] md:h-[245px] lg:h-[370px] object-cover rounded-[10px] sm:rounded-[15px] md:rounded-[30px]"
       />
 
       <!-- Концерт  -->
       <div
-        class="mt-5 w-full flex flex-col items-start gap-5 sm:mt-[30px] xl:mt-[50px]"
+        class="my-5 w-full flex flex-col xl:flex-row items-start gap-5 sm:mt-[30px] xl:mt-[50px]"
       >
         <div class="w-full flex flex-col gap-[10px]">
           <a
             href="./ploshadka.html"
             target="_blank"
-            class="text-2xl md:text-[32px] font-semibold"
+            class="text-lg sm:text-2xl md:text-[32px] font-semibold"
           >
             Концерт «Органный фестиваль. Даниэль Сальвадор»
           </a>
-          <p class="text-base md:text-lg font-medium">
+          <p class="text-sm sm:text-lg font-medium">
             18 марта · СБ · 12:00 · 2023 · Театр · Детям
           </p>
         </div>
 
-        <div class="w-full flex flex-wrap justify-center gap-x-5 gap-y-2">
+        <div class="min-w-[300px] w-[300px] grid grid-cols-2 gap-[10px]">
           <button
-            class="h-[45px] grow basis-52 rounded-[50px] bg-[#F71313] text-white font-medium"
+            class="h-[45px] rounded-[50px] bg-[#F71313] text-white font-medium"
           >
-            Билеты от 350 ₽
+            Билеты
           </button>
           <button
-            class="h-[45px] grow basis-52 rounded-[50px] bg-[#1206F9] text-white font-medium"
+            class="h-[45px] rounded-[50px] bg-[#F71313] text-white font-medium"
           >
-            Пушкинская карта
+            от 350 ₽
           </button>
         </div>
-
-        <a
-          href="./ploshadka.html"
-          target="_blank"
-          class="mt-5 text-base sm:text-lg md:text-lg border-b font-medium border-[#F71313]"
-        >
-          ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
-        </a>
       </div>
     </section>
   </main>

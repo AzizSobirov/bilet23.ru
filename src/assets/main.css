@@ -13,6 +13,21 @@ body {
   opacity: 1;
 }
 
+#intro-swiper .swiper-pagination {
+  padding: 0 40px;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+#intro-swiper .swiper-pagination-bullet {
+  margin: 0;
+  height: 3px;
+  border-radius: 4px;
+  background: #fff;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   background-color: #363636;
@@ -534,17 +549,11 @@ input::-webkit-inner-spin-button {
   gap: 12px;
   padding: 10px 24px;
   font-size: 16px;
-  border-radius: 19px;
-  background-color: #ebebeb;
   color: #a5a5a5;
   cursor: pointer;
   transition:
     background-color 0.3s,
     color 0.3s;
-}
-
-.checkbox-label:hover {
-  background-color: #d8d8d8;
 }
 
 .hidden-checkbox {

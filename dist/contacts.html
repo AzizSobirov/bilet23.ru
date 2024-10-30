@@ -9,13 +9,13 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <title>Bilet23.ru</title>
-    <link rel="stylesheet" href="/assets/css/app.CdT8BUUp.css" />
+    <link rel="stylesheet" href="/assets/css/app.C_Ph12yU.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="bg-[#F71313]">
       <div
-        class="px-5 xl:px-0 max-w-[1160px] mx-auto py-[25px] flex items-center justify-between"
+        class="px-5 xl:px-0 max-w-[1160px] mx-auto py-[26px] flex items-center justify-between"
       >
         <!-- Logo -->
         <a
@@ -32,11 +32,11 @@
           </div>
         </a>
         <div
-          class="bg-transparent xl:bg-[#FFFFFF] xl:rounded-[30px] py-[18px] flex items-center justify-between xl:px-[24px]"
+          class="bg-transparent xl:bg-[#FFFFFF] xl:rounded-[30px] py-[16px] flex items-center justify-between xl:px-[24px]"
         >
           <input
             type="text"
-            class="hidden xl:flex w-[500px] xl:w-[650px] outline-0 border-0 text-[18px]"
+            class="hidden xl:flex w-[500px] xl:w-[650px] outline-0 border-0"
             placeholder="Поиск по мероприятиям"
           />
           <img
@@ -61,11 +61,11 @@
             </div>
           </div>
         </div>
-        <a
-          href="tel:79991234567"
-          class="hidden xl:flex text-[#fff] text-[18px] hover:underline"
-          >+7 999 123-45-67</a
-        >
+        <div class="hidden xl:flex gap-2">
+          <a href="#"> <img src="./assets/images/telegram.svg" alt="" /> </a>
+          <a href="#"> <img src="./assets/images/whatsapp.svg" alt="" /> </a>
+          <a href="#"> <img src="./assets/images/vk.svg" alt="" /> </a>
+        </div>
       </div>
       <nav
         class="flex items-center justify-between max-w-[1160px] mx-auto xl:hidden"
@@ -105,13 +105,18 @@
             >
           </li>
           <li>
+            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+              >Площадки</a
+            >
+          </li>
+          <li>
             <a
               href="tel:79991234567"
               class="text-[#fff] text-[18px] hover:underline"
               >+7 999 123-45-67</a
             >
           </li>
-          <li>
+          <li class="mt-2">
             <a
               href="#"
               class="border border-white rounded-[30px] py-[11px] px-[27px] text-[18px] text-white hover:bg-white hover:text-[#F71313] transition-all"
@@ -146,33 +151,22 @@
       </div>
       <div class="flex justify-center items-center">
         <div
-          class="max-w-[1160px] w-full justify-between py-[10px] hidden xl:flex"
+          class="max-w-[1160px] w-full justify-between pb-[14px] hidden xl:flex"
         >
           <div
             class="hidden xl:flex px-[30px] xl:px-0 items-center justify-start gap-[40px]"
           >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Спектакли</a
-            >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Концерты</a
-            >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Фестивали</a
-            >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Мюзиклы</a
-            >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Детям</a
-            >
-            <a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
-              >Классика</a
-            >
+            <a href="#" class="text-[#fff] hover:opacity-70">Спектакли</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Концерты</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Фестивали</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Мюзиклы</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Детям</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Классика</a>
+            <a href="#" class="text-[#fff] hover:opacity-70">Площадки</a>
           </div>
           <a
             href="#"
-            class="hidden lg:flex border border-white rounded-[30px] py-[11px] px-[27px] text-[18px] text-white hover:bg-white hover:text-[#F71313] transition-all"
+            class="hidden lg:flex border border-white rounded-[30px] py-[8px] px-[28px] text-white hover:bg-white hover:text-[#F71313] transition-all"
             >Подобрать мероприятие</a
           >
         </div>
@@ -262,7 +256,7 @@
             BILET23.RU
           </h1>
         </div>
-        <div class="text-[14px] md:text-[18px] flex flex-col items-start">
+        <div class="text-[14px] md:text-base flex flex-col items-start">
           <a href="#" class="text-white hover:underline"
             >109004, Москва, ул. Станиславского, д. 21, стр. 3</a
           >
@@ -363,6 +357,6 @@
     </footer>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./assets/js/app.js?v=1.2"></script>
+    <script src="./assets/js/app.js?v=2"></script>
   </body>
 </html>
